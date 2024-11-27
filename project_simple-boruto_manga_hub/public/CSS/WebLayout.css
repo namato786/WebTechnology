@@ -1,0 +1,373 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    text-transform: uppercase;
+    color: aliceblue;
+    font-size: 30px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    /* Vertically center items */
+    justify-content: center;
+    /* Horizontally center items */
+    height: 100px;
+    width: 100%;
+    background-color: rgb(191, 94, 9);
+    border: 2px solid black;
+    box-sizing: border-box;
+    padding: 0 10px;
+    gap: 15px;
+    /* Space between elements */
+}
+
+.section-img {
+    padding-left: 5px;
+    height: 80px;
+    /* Adjust the size of the image */
+    position: absolute;
+    /* Position the image absolutely */
+    left: 10px;
+    /* Align to the left of the section */
+}
+
+.section-img:hover {
+    transform: scale3d(2, 2, 2);
+}
+
+section h1 {
+    margin: 0;
+    /* Remove default margins */
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    /* Center the text */
+    flex: 1;
+    /* Allow the text to center in the flex container */
+}
+
+section h1:hover {
+    background-color: black;
+    color: aliceblue;
+}
+
+.audio-control {
+    height: 40px;
+    position: absolute;
+    left: 50px;
+    /* Position it on the right side of the header */
+    bottom: 10px;
+    /* Give it some spacing from the bottom */
+    display: none;
+    /* Initially hidden */
+}
+
+/* Show the audio player when hovering over the header */
+header:hover .audio-control {
+    display: block;
+    /* Show when header is hovered */
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(0, 21, 21);
+    position: sticky;
+    top: 0;
+    box-sizing: content-box;
+    box-shadow: 10px 10px 15px rgba(64, 62, 62, 0.5);
+    text-align: center;
+    transition: top 0.3s ease-in-out;
+
+}
+
+nav .heading:hover {
+    color: orange;
+}
+
+header {
+    position: relative;
+    height: 80px;
+    /* Adjust based on your design */
+    overflow: hidden;
+    /* Prevent video from overflowing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* Ensure the text stands out */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Enhance text visibility */
+}
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the video fills the header area */
+    z-index: -1;
+    /* Places the video behind the text */
+}
+
+
+.header-title {
+    z-index: 1;
+    /* Ensure the text appears above the video */
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Add some padding around the text */
+}
+
+.header-title:hover {
+    opacity: 0.1;
+}
+
+.aside-img {
+    height: 600px;
+    width: 400px;
+    background-repeat: no-repeat;
+}
+
+
+
+/* Ensure each anchor tag wraps its respective image */
+
+
+.cover {
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 300px;
+    padding: 0%;
+    margin: 0%;
+}
+
+.middle {
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 300px;
+    padding: 0%;
+    margin: 0%;
+}
+
+#manga-cover aside {
+    display: flex;
+    flex-wrap: wrap;
+    height: 603px;
+    width: 700px;
+    background-color: rgb(17, 16, 16);
+    z-index: -1;
+}
+
+footer {
+    background-color: red;
+    height: 80px;
+    width: 100%;
+}
+
+footer {
+    background-color: rgb(245, 134, 50);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 20px;
+    }
+
+    section {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .section-img {
+        height: 60px;
+        padding-left: 0;
+    }
+
+    section h1 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    header {
+        height: 150px;
+        padding: 20px;
+    }
+
+    .header-title {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .aside-img,
+    .cover,
+    .middle {
+        width: 100%;
+        height: auto;
+    }
+
+    #manga-cover aside {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    footer a {
+        margin: 5px;
+    }
+}
+
+/* Media Query for Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    body {
+        font-size: 22px;
+    }
+
+    section {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .section-img {
+        height: 70px;
+    }
+
+    section h1 {
+        font-size: 22px;
+    }
+
+    .audio-control {
+        height: 50px;
+        bottom: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    header {
+        height: 200px;
+        padding: 20px;
+    }
+
+    .header-title {
+        font-size: 1.8rem;
+        padding: 10px;
+    }
+
+    .aside-img,
+    .cover,
+    .middle {
+        width: 90%;
+        height: auto;
+    }
+
+    #manga-cover aside {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
+
+/* Media Query for Large Screens (min-width: 7680px) */
+@media (min-width: 7680px) {
+    body {
+        font-size: 40px;
+        /* Adjust font size for very large screens */
+    }
+
+    section {
+        height: 120px;
+        padding: 0 20px;
+    }
+
+    .section-img {
+        height: 100px;
+    }
+
+    section h1 {
+        font-size: 32px;
+        margin-left: 20px;
+    }
+
+    nav {
+        height: 120px;
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+
+    .header-title {
+        font-size: 3rem;
+    }
+
+    .aside-img,
+    .cover,
+    .middle {
+        width: 500px;
+        height: 750px;
+    }
+
+    #manga-cover aside {
+        flex-direction: row;
+        width: 80%;
+        justify-content: space-between;
+        height: 750px;
+    }
+
+    footer {
+        padding: 40px 0;
+    }
+
+    footer a {
+        margin: 0 20px;
+    }
+}
